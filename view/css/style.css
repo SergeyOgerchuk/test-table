@@ -1,0 +1,382 @@
+button {
+    border: none;
+    cursor: pointer
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+table {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    border-spacing: 5px;
+    color: #656665;
+    border: 16px solid turquoise;
+    border-radius: 20px;
+    background-color: #F0FFFF;
+    font-size: 16px;
+}
+
+.table_head {
+    background-color: turquoise;
+}
+
+table td {
+    padding: 5px;
+    text-align: center;
+
+    vertical-align: middle;
+}
+
+.hover-td {
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+
+.hover-td-other {
+    background-color: darkgray;
+    color: white;
+}
+
+.table_head-hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+.search-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: cadetblue;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: cadetblue;
+    color: black;
+}
+
+.search-btn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+}
+
+.search-btn > i {
+    font-size: 30px;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.add-box {
+    margin-left: 20px;
+    background: cadetblue;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.add-btn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn > i {
+    font-size: 30px;
+}
+
+.add-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.trash-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: cadetblue;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+
+.trash-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.trash-box:hover > .search-btn {
+    background: cadetblue;
+    color: black;
+}
+
+.trash-btn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+}
+
+.trash-btn > i {
+    font-size: 30px;
+}
+
+.trash-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.td_checkbox {
+    border: none;
+    width: 5px;
+    height: 5px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid cadetblue;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.create_container {
+    padding: 16px;
+}
+
+.create_input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+.create_input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: turquoise;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-family: Arial, sans-serif;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+    background-color: cadetblue;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    height: 60px;
+}
+
+input[type=text] {
+    height: 54px;
+    width: 400px;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.submit {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.test {
+    background-color: red;
+}
